@@ -26,7 +26,6 @@ async def _job_send_email(schedule_id: str):
         send_email(
             to_email=s["email"],
             subject=subject,
-            # html_body=f"<p>{body}</p>",
             text_body=body,
         )
 
