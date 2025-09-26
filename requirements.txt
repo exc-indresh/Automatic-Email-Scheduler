@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+APScheduler
+pydantic
+motor
+python-dotenv
+pandas
+openpyxl
+python-dateutil
+pytz
+httpx
+pydantic_settings
