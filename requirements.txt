@@ -10,3 +10,5 @@ python-dateutil
 pytz
 httpx
 pydantic_settings
+pymongo
+pydantic[email]
