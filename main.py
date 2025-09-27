@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api import schedules as schedules_router
+from app.api import cron, schedules as schedules_router
 from app.db import init_db
 from app.services.scheduler import scheduler
 from app.utils.excel_reader import import_from_excel
@@ -8,6 +8,7 @@ from app.utils.excel_reader import import_from_excel
 app = FastAPI(title="Email Scheduler")
 
 app.include_router(schedules_router.router, prefix="/schedules", tags=["schedules"])
+app.include_router(cron.router, tags=["cron"])
 
 @app.on_event("startup")
 async def startup_event():
